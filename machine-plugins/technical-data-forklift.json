@@ -568,15 +568,30 @@
                             "type": "number",
                             "default": 0
                         },
+                        "heightOfMastLoweredUnit":
+                        {
+                            "type": "string",
+                            "default": "m"
+                        },
                         "freeLift":
                         {
                             "type": "number",
                             "default": 0
                         },
+                         "freeLiftUnit":
+                        {
+                            "type": "string",
+                            "default": "m"
+                        },
                         "lift":
                         {
                             "type": "number",
                             "default": 0
+                        },
+                        "liftUnit":
+                        {
+                            "type": "string",
+                            "default": "m"
                         },
                         "initialLift":
                         {
@@ -587,6 +602,11 @@
                         {
                             "type": "number",
                             "default": 0
+                        },
+                        "heightOfMastExtentedUnit":
+                        {
+                            "type": "string",
+                            "default": "m"
                         },
                         "forkCarriageType":
                         {

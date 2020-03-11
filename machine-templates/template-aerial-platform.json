@@ -1,0 +1,805 @@
+{
+  "description": {
+    "author": "Evan GmbH",
+    "dbcpVersion": 2,
+    "description": "",
+    "i18n": {
+      "de": {
+        "description": "",
+        "name": "Lindig Arbeitsbühne"
+      },
+      "en": {
+        "description": "",
+        "name": "Lindig Aerial Platform"
+      }
+    },
+    "name": "lindig_aerial_platform",
+    "version": "0.1.0"
+  },
+  "plugins": {
+    "calendar": {
+      "description": {
+        "author": "Lindig",
+        "dbcpVersion": 2,
+        "description": "",
+        "i18n": {
+          "de": {
+            "calendar": {
+              "name": "Mietkalender"
+            },
+            "description": "",
+            "name": "Mietkalender"
+          },
+          "en": {
+            "calendar": {
+              "name": "Rental calendar"
+            },
+            "description": "",
+            "name": "Rental calendar"
+          }
+        },
+        "name": "calendar",
+        "version": "1.0.0"
+      },
+      "template": {
+        "properties": {
+          "calendar": {
+            "dataSchema": {
+              "items": {
+                "properties": {
+                  "details": {
+                    "additionalProperties": true,
+                    "default": {},
+                    "type": "object"
+                  },
+                  "from": {
+                    "default": "",
+                    "type": "number"
+                  },
+                  "orderDetails": {
+                    "additionalProperties": true,
+                    "default": {},
+                    "type": "object"
+                  },
+                  "orderHistory": {
+                    "additionalProperties": true,
+                    "default": {},
+                    "type": "object"
+                  },
+                  "to": {
+                    "default": "",
+                    "type": "number"
+                  },
+                  "type": {
+                    "default": "",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "permissions": {
+              "0": [
+                "set",
+                "remove"
+              ]
+            },
+            "type": "list"
+          }
+        },
+        "type": "metadata"
+      }
+    },
+    "metadata": {
+      "description": {
+        "author": "Lindig",
+        "dbcpVersion": 2,
+        "description": "",
+        "i18n": {
+          "de": {
+            "description": "",
+            "name": "Produktdaten"
+          },
+          "en": {
+            "description": "",
+            "name": "Product data"
+          }
+        },
+        "name": "metadata",
+        "version": "1.0.0"
+      },
+      "template": {
+        "properties": {
+          "characteristics": {
+            "dataSchema": {
+              "$id": "characteristics_schema",
+              "properties": {
+                "certificateOfQualification": {
+                  "default": "",
+                  "type": "string"
+                },
+                "color": {
+                  "default": "",
+                  "type": "string"
+                },
+                "licenseClass": {
+                  "default": "",
+                  "type": "string"
+                },
+                "licenseRequired": {
+                  "default": "",
+                  "type": "string"
+                },
+                "profilePicture": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "default": {
+                    "files": []
+                  },
+                  "maxItems": 1,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "dimensions": {
+            "dataSchema": {
+              "$id": "dimensions_schema",
+              "properties": {
+                "groundClearanceCentre": {
+                  "default": "",
+                  "type": "number"
+                },
+                "groundClearanceCentreUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "height": {
+                  "default": "",
+                  "type": "number"
+                },
+                "heightStowed": {
+                  "default": "",
+                  "type": "number"
+                },
+                "heightStowedUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "heightUnit": {
+                  "default": "mm",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "length": {
+                  "default": "",
+                  "type": "number"
+                },
+                "lengthStowed": {
+                  "default": "",
+                  "type": "number"
+                },
+                "lengthStowedUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "lengthUnit": {
+                  "default": "mm",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "outrigger": {
+                  "default": "",
+                  "type": "string"
+                },
+                "platformLength": {
+                  "default": "",
+                  "type": "number"
+                },
+                "platformLengthUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "platformWidth": {
+                  "default": "",
+                  "type": "number"
+                },
+                "platformWidthUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "wheelbase": {
+                  "default": "",
+                  "type": "number"
+                },
+                "wheelbaseUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "width": {
+                  "default": "",
+                  "type": "number"
+                },
+                "widthStowed": {
+                  "default": "",
+                  "type": "number"
+                },
+                "widthStowedUnit": {
+                  "default": "mm",
+                  "type": "string"
+                },
+                "widthUnit": {
+                  "default": "mm",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "documents": {
+            "dataSchema": {
+              "$id": "documents_schema",
+              "properties": {
+                "machinePictures": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "default": {
+                    "files": []
+                  },
+                  "maxItems": 10,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "operaterFilm": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "default": {
+                    "files": []
+                  },
+                  "maxItems": 3,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "operationManual": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "default": {
+                    "files": []
+                  },
+                  "maxItems": 5,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "workingChart": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "default": {
+                    "files": []
+                  },
+                  "maxItems": 3,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "drive": {
+            "dataSchema": {
+              "$id": "drive_schema",
+              "properties": {
+                "awd": {
+                  "default": "",
+                  "type": "string"
+                },
+                "batteryCapacity": {
+                  "default": "",
+                  "type": "number"
+                },
+                "batteryType": {
+                  "default": "",
+                  "type": "string"
+                },
+                "batteryVoltage": {
+                  "default": "",
+                  "type": "number"
+                },
+                "capacityUnit": {
+                  "default": "Ah",
+                  "type": "string"
+                },
+                "driveType": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "powerCobustionEngine": {
+                  "default": "",
+                  "type": "number"
+                },
+                "powerUnit": {
+                  "default": "kW",
+                  "type": "string"
+                },
+                "tankCapacity": {
+                  "default": "",
+                  "type": "number"
+                },
+                "tankCapacityUnit": {
+                  "default": "l",
+                  "type": "string"
+                },
+                "voltageUnit": {
+                  "default": "V",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "identity": {
+            "dataSchema": {
+              "$id": "identity_schema",
+              "properties": {
+                "chassisNumber": {
+                  "default": "",
+                  "type": "string"
+                },
+                "machineCategory": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineClass": {
+                  "default": "Arbeitsbühne",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineId": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturerModelDesignation": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "yom": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "locationData": {
+            "dataSchema": {
+              "$id": "locationData_schema",
+              "properties": {
+                "actualLocation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "assignedLocation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "city": {
+                  "default": "",
+                  "type": "string"
+                },
+                "country": {
+                  "default": "",
+                  "type": "string"
+                },
+                "houseNumber": {
+                  "default": "",
+                  "type": "number"
+                },
+                "latitude": {
+                  "default": "",
+                  "type": "string"
+                },
+                "longitude": {
+                  "default": "",
+                  "type": "string"
+                },
+                "street": {
+                  "default": "",
+                  "type": "string"
+                },
+                "zipCode": {
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "others": {
+            "dataSchema": {
+              "$id": "others_schema",
+              "properties": {
+                "soundLevelAtOperatorsEar": {
+                  "default": "",
+                  "type": "number"
+                },
+                "soundLevelUnit": {
+                  "default": "dbA",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "owner": {
+            "dataSchema": {
+              "$id": "owner_schema",
+              "properties": {
+                "internalAssetDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "internalModelDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "internalSystemDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "licensePlate": {
+                  "default": "",
+                  "type": "string"
+                },
+                "owner": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "performance": {
+            "dataSchema": {
+              "$id": "performance_schema",
+              "properties": {
+                "gradeability": {
+                  "default": "",
+                  "type": "number"
+                },
+                "gradeabilityUnit": {
+                  "default": "° (Grad), % (Prozent)",
+                  "type": "string"
+                },
+                "jib": {
+                  "default": "",
+                  "type": "string"
+                },
+                "maximumLoadCapacity": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maximumLoadCapacityUnit": {
+                  "default": "kg",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "maximumPersonsAllowed": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maximumReach": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maximumReachUnit": {
+                  "default": "m",
+                  "type": "string"
+                },
+                "maximumWorkingHeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maximumWorkingHeightUnit": {
+                  "default": "m",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "maxmimumStandingPlatformHeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maxmimumStandingPlatformHeightUnit": {
+                  "default": "m",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "movability": {
+                  "default": "",
+                  "type": "string"
+                },
+                "oscillatingAxle": {
+                  "default": "",
+                  "type": "string"
+                },
+                "platformExtension": {
+                  "default": "",
+                  "type": "string"
+                },
+                "rotationType": {
+                  "default": "",
+                  "type": "string"
+                },
+                "rotationUnit": {
+                  "default": "° (Grad)",
+                  "type": "string"
+                },
+                "turntableRotation": {
+                  "default": "",
+                  "type": "number"
+                },
+                "upAndOverHeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "upAndOverHeightUnit": {
+                  "default": "m",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "usability": {
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "weights": {
+            "dataSchema": {
+              "$id": "weights_schema",
+              "properties": {
+                "batteryWeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "batteryWeightUnit": {
+                  "default": "kg",
+                  "type": "string"
+                },
+                "groundPressure": {
+                  "default": "",
+                  "type": "number"
+                },
+                "groundPressureUnit": {
+                  "default": "psi / kg",
+                  "type": "string"
+                },
+                "serviceWeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "serviceWeightUnit": {
+                  "default": "kg",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "trailerLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "trailerLoadUnit": {
+                  "default": "kg",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          },
+          "wheels": {
+            "dataSchema": {
+              "$id": "wheels_schema",
+              "properties": {
+                "markingNonMarking": {
+                  "default": "",
+                  "type": "string"
+                },
+                "tireType": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "wheelNumberFront": {
+                  "default": "",
+                  "type": "number"
+                },
+                "wheelNumberRear": {
+                  "default": "",
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry"
+          }
+        },
+        "type": "metadata"
+      }
+    },
+    "transportorders": {
+      "description": {
+        "author": "Lindig",
+        "dbcpVersion": 2,
+        "description": "",
+        "i18n": {
+          "de": {
+            "description": "",
+            "name": "Übergabeprozess",
+            "transportorders": {
+              "name": "Übergabeprozess"
+            }
+          },
+          "en": {
+            "description": "",
+            "name": "Transport Orders",
+            "transportorders": {
+              "name": "Transport Orders"
+            }
+          }
+        },
+        "name": "transportorders",
+        "version": "1.0.0"
+      },
+      "template": {
+        "properties": {
+          "transportorders": {
+            "dataSchema": {
+              "items": {
+                "default": "",
+                "minLength": 1,
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "permissions": {
+              "0": [
+                "set",
+                "remove"
+              ]
+            },
+            "type": "list"
+          }
+        },
+        "type": "metadata"
+      }
+    }
+  }
+}

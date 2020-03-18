@@ -49,7 +49,6 @@
                 "properties": {
                   "details": {
                     "additionalProperties": true,
-                    "default": {},
                     "type": "object"
                   },
                   "from": {
@@ -58,12 +57,10 @@
                   },
                   "orderDetails": {
                     "additionalProperties": true,
-                    "default": {},
                     "type": "object"
                   },
                   "orderHistory": {
                     "additionalProperties": true,
-                    "default": {},
                     "type": "object"
                   },
                   "to": {
@@ -133,9 +130,6 @@
                 },
                 "profilePicture": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 1,
                   "properties": {
                     "additionalProperties": false,
@@ -159,7 +153,12 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "profilePicture": {
+                "files": []
+              }
+            }
           },
           "dimensions": {
             "dataSchema": {
@@ -170,7 +169,6 @@
                   "type": "number"
                 },
                 "groundClearanceCentreUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "height": {
@@ -182,11 +180,9 @@
                   "type": "number"
                 },
                 "heightStowedUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "heightUnit": {
-                  "default": "mm",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -199,11 +195,9 @@
                   "type": "number"
                 },
                 "lengthStowedUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "lengthUnit": {
-                  "default": "mm",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -216,7 +210,6 @@
                   "type": "number"
                 },
                 "platformLengthUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "platformWidth": {
@@ -224,7 +217,6 @@
                   "type": "number"
                 },
                 "platformWidthUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "wheelbase": {
@@ -232,7 +224,6 @@
                   "type": "number"
                 },
                 "wheelbaseUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "width": {
@@ -244,11 +235,9 @@
                   "type": "number"
                 },
                 "widthStowedUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "widthUnit": {
-                  "default": "mm",
                   "minLength": 1,
                   "type": "string"
                 }
@@ -260,7 +249,19 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "groundClearanceCentreUnit": "mm",
+              "heightStowedUnit": "mm",
+              "heightUnit": "mm",
+              "lengthStowedUnit": "mm",
+              "lengthUnit": "mm",
+              "platformLengthUnit": "mm",
+              "platformWidthUnit": "mm",
+              "wheelbaseUnit": "mm",
+              "widthStowedUnit": "mm",
+              "widthUnit": "mm"
+            }
           },
           "documents": {
             "dataSchema": {
@@ -268,9 +269,6 @@
               "properties": {
                 "machinePictures": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 10,
                   "properties": {
                     "additionalProperties": false,
@@ -288,9 +286,6 @@
                 },
                 "operaterFilm": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 3,
                   "properties": {
                     "additionalProperties": false,
@@ -308,9 +303,6 @@
                 },
                 "operationManual": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 5,
                   "properties": {
                     "additionalProperties": false,
@@ -328,9 +320,6 @@
                 },
                 "workingChart": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 3,
                   "properties": {
                     "additionalProperties": false,
@@ -354,7 +343,21 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "machinePictures": {
+                "files": []
+              },
+              "operaterFilm": {
+                "files": []
+              },
+              "operationManual": {
+                "files": []
+              },
+              "workingChart": {
+                "files": []
+              }
+            }
           },
           "drive": {
             "dataSchema": {
@@ -377,7 +380,6 @@
                   "type": "number"
                 },
                 "capacityUnit": {
-                  "default": "Ah",
                   "type": "string"
                 },
                 "driveType": {
@@ -390,7 +392,6 @@
                   "type": "number"
                 },
                 "powerUnit": {
-                  "default": "kW",
                   "type": "string"
                 },
                 "tankCapacity": {
@@ -398,11 +399,9 @@
                   "type": "number"
                 },
                 "tankCapacityUnit": {
-                  "default": "l",
                   "type": "string"
                 },
                 "voltageUnit": {
-                  "default": "V",
                   "type": "string"
                 }
               },
@@ -413,7 +412,13 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "capacityUnit": "Ah",
+              "powerUnit": "kW",
+              "tankCapacityUnit": "l",
+              "voltageUnit": "V"
+            }
           },
           "identity": {
             "dataSchema": {
@@ -429,7 +434,6 @@
                   "type": "string"
                 },
                 "machineClass": {
-                  "default": "Arbeitsbühne",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -461,7 +465,10 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "machineClass": "Arbeitsbühne"
+            }
           },
           "locationData": {
             "dataSchema": {
@@ -511,7 +518,8 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           },
           "others": {
             "dataSchema": {
@@ -522,7 +530,6 @@
                   "type": "number"
                 },
                 "soundLevelUnit": {
-                  "default": "dbA",
                   "type": "string"
                 }
               },
@@ -533,7 +540,10 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "soundLevelUnit": "dbA"
+            }
           },
           "owner": {
             "dataSchema": {
@@ -568,7 +578,8 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           },
           "performance": {
             "dataSchema": {
@@ -579,7 +590,6 @@
                   "type": "number"
                 },
                 "gradeabilityUnit": {
-                  "default": "° (Grad), % (Prozent)",
                   "type": "string"
                 },
                 "jib": {
@@ -591,7 +601,6 @@
                   "type": "number"
                 },
                 "maximumLoadCapacityUnit": {
-                  "default": "kg",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -604,7 +613,6 @@
                   "type": "number"
                 },
                 "maximumReachUnit": {
-                  "default": "m",
                   "type": "string"
                 },
                 "maximumWorkingHeight": {
@@ -612,7 +620,6 @@
                   "type": "number"
                 },
                 "maximumWorkingHeightUnit": {
-                  "default": "m",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -621,7 +628,6 @@
                   "type": "number"
                 },
                 "maxmimumStandingPlatformHeightUnit": {
-                  "default": "m",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -642,7 +648,6 @@
                   "type": "string"
                 },
                 "rotationUnit": {
-                  "default": "° (Grad)",
                   "type": "string"
                 },
                 "turntableRotation": {
@@ -654,7 +659,6 @@
                   "type": "number"
                 },
                 "upAndOverHeightUnit": {
-                  "default": "m",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -670,7 +674,16 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "gradeabilityUnit": "° (Grad), % (Prozent)",
+              "maximumLoadCapacityUnit": "kg",
+              "maximumReachUnit": "m",
+              "maximumWorkingHeightUnit": "m",
+              "maxmimumStandingPlatformHeightUnit": "m",
+              "rotationUnit": "° (Grad)",
+              "upAndOverHeightUnit": "m"
+            }
           },
           "weights": {
             "dataSchema": {
@@ -681,7 +694,6 @@
                   "type": "number"
                 },
                 "batteryWeightUnit": {
-                  "default": "kg",
                   "type": "string"
                 },
                 "groundPressure": {
@@ -689,7 +701,6 @@
                   "type": "number"
                 },
                 "groundPressureUnit": {
-                  "default": "psi / kg",
                   "type": "string"
                 },
                 "serviceWeight": {
@@ -697,7 +708,6 @@
                   "type": "number"
                 },
                 "serviceWeightUnit": {
-                  "default": "kg",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -706,7 +716,6 @@
                   "type": "number"
                 },
                 "trailerLoadUnit": {
-                  "default": "kg",
                   "type": "string"
                 }
               },
@@ -717,7 +726,13 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "batteryWeightUnit": "kg",
+              "groundPressureUnit": "psi / kg",
+              "serviceWeightUnit": "kg",
+              "trailerLoadUnit": "kg"
+            }
           },
           "wheels": {
             "dataSchema": {
@@ -748,7 +763,8 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           }
         },
         "type": "metadata"

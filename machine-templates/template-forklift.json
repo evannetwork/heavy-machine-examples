@@ -49,7 +49,6 @@
                 "properties": {
                   "details": {
                     "additionalProperties": true,
-                    "default": {},
                     "type": "object"
                   },
                   "from": {
@@ -58,12 +57,10 @@
                   },
                   "orderDetails": {
                     "additionalProperties": true,
-                    "default": {},
                     "type": "object"
                   },
                   "orderHistory": {
                     "additionalProperties": true,
-                    "default": {},
                     "type": "object"
                   },
                   "to": {
@@ -116,26 +113,19 @@
               "$id": "characteristics_schema",
               "properties": {
                 "certificateOfQualification": {
-                  "default": "---",
                   "type": "string"
                 },
                 "color": {
-                  "default": "---",
                   "type": "string"
                 },
                 "licenseClass": {
-                  "default": "---",
                   "type": "string"
                 },
                 "licenseRequired": {
-                  "default": "---",
                   "type": "string"
                 },
                 "profilePicture": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 1,
                   "properties": {
                     "additionalProperties": false,
@@ -162,7 +152,16 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "certificateOfQualification": "---",
+              "color": "---",
+              "licenseClass": "---",
+              "licenseRequired": "---",
+              "profilePicture": {
+                "files": []
+              }
+            }
           },
           "dimensions": {
             "dataSchema": {
@@ -173,7 +172,6 @@
                   "type": "number"
                 },
                 "forkCarriageWidthUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "forkHeight": {
@@ -181,7 +179,6 @@
                   "type": "number"
                 },
                 "forkHeightUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "forkLength": {
@@ -189,7 +186,6 @@
                   "type": "number"
                 },
                 "forkLengthUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "forkWidth": {
@@ -197,7 +193,6 @@
                   "type": "number"
                 },
                 "forkWidthUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "groundClearance": {
@@ -205,7 +200,6 @@
                   "type": "number"
                 },
                 "groundClearanceUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "heightOfOvergheadGuard": {
@@ -213,7 +207,6 @@
                   "type": "number"
                 },
                 "heightOfOvergheadGuardUnit": {
-                  "default": "mm",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -222,7 +215,6 @@
                   "type": "number"
                 },
                 "lengthToForkFaceUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "overallLength": {
@@ -230,7 +222,6 @@
                   "type": "number"
                 },
                 "overallLengthUnit": {
-                  "default": "mm",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -239,7 +230,6 @@
                   "type": "number"
                 },
                 "overallWidthUnit": {
-                  "default": "mm",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -248,7 +238,6 @@
                   "type": "number"
                 },
                 "wheelbaseUnit": {
-                  "default": "mm",
                   "type": "string"
                 }
               },
@@ -259,7 +248,19 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "forkCarriageWidthUnit": "mm",
+              "forkHeightUnit": "mm",
+              "forkLengthUnit": "mm",
+              "forkWidthUnit": "mm",
+              "groundClearanceUnit": "mm",
+              "heightOfOvergheadGuardUnit": "mm",
+              "lengthToForkFaceUnit": "mm",
+              "overallLengthUnit": "mm",
+              "overallWidthUnit": "mm",
+              "wheelbaseUnit": "mm"
+            }
           },
           "documents": {
             "dataSchema": {
@@ -267,9 +268,6 @@
               "properties": {
                 "machinePictures": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 10,
                   "properties": {
                     "additionalProperties": false,
@@ -287,9 +285,6 @@
                 },
                 "operaterFilm": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 3,
                   "properties": {
                     "additionalProperties": false,
@@ -307,9 +302,6 @@
                 },
                 "operationManual": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 5,
                   "properties": {
                     "additionalProperties": false,
@@ -327,9 +319,6 @@
                 },
                 "workingChart": {
                   "$comment": "{\"isEncryptedFile\": true}",
-                  "default": {
-                    "files": []
-                  },
                   "maxItems": 3,
                   "properties": {
                     "additionalProperties": false,
@@ -353,7 +342,21 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "machinePictures": {
+                "files": []
+              },
+              "operaterFilm": {
+                "files": []
+              },
+              "operationManual": {
+                "files": []
+              },
+              "workingChart": {
+                "files": []
+              }
+            }
           },
           "drive": {
             "dataSchema": {
@@ -375,7 +378,6 @@
                   "type": "number"
                 },
                 "capacityUnit": {
-                  "default": "Ah",
                   "type": "string"
                 },
                 "driveType": {
@@ -388,11 +390,9 @@
                   "type": "number"
                 },
                 "powerUnit": {
-                  "default": "kW",
                   "type": "string"
                 },
                 "tankCapaciityUnit": {
-                  "default": "l",
                   "type": "string"
                 },
                 "tankCapacity": {
@@ -400,7 +400,6 @@
                   "type": "number"
                 },
                 "voltageUnit": {
-                  "default": "V",
                   "type": "string"
                 }
               },
@@ -411,7 +410,13 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "capacityUnit": "Ah",
+              "powerUnit": "kW",
+              "tankCapaciityUnit": "l",
+              "voltageUnit": "V"
+            }
           },
           "equipment": {
             "dataSchema": {
@@ -462,7 +467,8 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           },
           "identity": {
             "dataSchema": {
@@ -478,7 +484,6 @@
                   "type": "string"
                 },
                 "machineClass": {
-                  "default": "Flurförderzeug",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -510,7 +515,10 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "machineClass": "Flurförderzeug"
+            }
           },
           "locationData": {
             "dataSchema": {
@@ -559,7 +567,8 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           },
           "mast": {
             "dataSchema": {
@@ -569,7 +578,6 @@
                   "type": "number"
                 },
                 "axleCentreToForkFaceUnit": {
-                  "default": "m",
                   "type": "string"
                 },
                 "externalAttachtment": {
@@ -585,11 +593,9 @@
                   "type": "number"
                 },
                 "freeLiftUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "heightOfMastExtendedUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "heightOfMastExtented": {
@@ -601,7 +607,6 @@
                   "type": "number"
                 },
                 "heightOfMastLoweredUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "initialLift": {
@@ -609,7 +614,6 @@
                   "type": "string"
                 },
                 "initialLiftUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "integratedAttachment": {
@@ -621,7 +625,6 @@
                   "type": "number"
                 },
                 "liftUnit": {
-                  "default": "mm",
                   "type": "string"
                 },
                 "loadCentre": {
@@ -629,7 +632,6 @@
                   "type": "number"
                 },
                 "loadCentreUnit": {
-                  "default": "m",
                   "type": "string"
                 },
                 "mastCarriageTilt": {
@@ -637,7 +639,6 @@
                   "type": "string"
                 },
                 "mastCarriageTiltUnit": {
-                  "default": "°",
                   "type": "string"
                 },
                 "mastType": {
@@ -653,7 +654,17 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "axleCentreToForkFaceUnit": "m",
+              "freeLiftUnit": "mm",
+              "heightOfMastExtendedUnit": "mm",
+              "heightOfMastLoweredUnit": "mm",
+              "initialLiftUnit": "mm",
+              "liftUnit": "mm",
+              "loadCentreUnit": "m",
+              "mastCarriageTiltUnit": "°"
+            }
           },
           "others": {
             "dataSchema": {
@@ -667,11 +678,9 @@
                   "type": "number"
                 },
                 "pressureUnit": {
-                  "default": "bar",
                   "type": "string"
                 },
                 "quantityUnit": {
-                  "default": "l / min",
                   "type": "string"
                 },
                 "soundLevelAtOperatorsEar": {
@@ -679,7 +688,6 @@
                   "type": "number"
                 },
                 "soundLevelUnit": {
-                  "default": "dbA",
                   "type": "string"
                 },
                 "typeOfDriveControl": {
@@ -694,7 +702,12 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "pressureUnit": "bar",
+              "quantityUnit": "l / min",
+              "soundLevelUnit": "dbA"
+            }
           },
           "owner": {
             "dataSchema": {
@@ -729,13 +742,13 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           },
           "performance": {
             "dataSchema": {
               "properties": {
                 "accelerationTimeLoadUnit": {
-                  "default": "s",
                   "type": "string"
                 },
                 "accelerationTimeWithLoad": {
@@ -747,7 +760,6 @@
                   "type": "number"
                 },
                 "climbingAbilityLoadUnit": {
-                  "default": "%",
                   "type": "string"
                 },
                 "climbingAbilityWithLoad": {
@@ -759,7 +771,6 @@
                   "type": "number"
                 },
                 "liftingSpeedUnit": {
-                  "default": "m / s",
                   "type": "string"
                 },
                 "liftingSpeedWithLoad": {
@@ -771,7 +782,6 @@
                   "type": "number"
                 },
                 "loweringSpeedUnit": {
-                  "default": "m / s",
                   "type": "string"
                 },
                 "loweringSpeedWithLoad": {
@@ -783,7 +793,6 @@
                   "type": "number"
                 },
                 "maximumClimbingAbilityLoadUnit": {
-                  "default": "%",
                   "type": "string"
                 },
                 "maximumClimbingAbilityWithLoad": {
@@ -799,12 +808,10 @@
                   "type": "number"
                 },
                 "maximumLoadCapacityUnit": {
-                  "default": "kg",
                   "minLength": 1,
                   "type": "string"
                 },
                 "maximumTractiveForceLoadUnit": {
-                  "default": "N",
                   "type": "string"
                 },
                 "maximumTractiveForceWithLoad": {
@@ -820,7 +827,6 @@
                   "type": "string"
                 },
                 "tractiveForceLoadUnit": {
-                  "default": "N",
                   "type": "string"
                 },
                 "tractiveForceWithLoad": {
@@ -832,7 +838,6 @@
                   "type": "number"
                 },
                 "travelSpeedUnit": {
-                  "default": "km / h",
                   "type": "string"
                 },
                 "travelSpeedWithLoad": {
@@ -851,7 +856,18 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "accelerationTimeLoadUnit": "s",
+              "climbingAbilityLoadUnit": "%",
+              "liftingSpeedUnit": "m / s",
+              "loweringSpeedUnit": "m / s",
+              "maximumClimbingAbilityLoadUnit": "%",
+              "maximumLoadCapacityUnit": "kg",
+              "maximumTractiveForceLoadUnit": "N",
+              "tractiveForceLoadUnit": "N",
+              "travelSpeedUnit": "km / h"
+            }
           },
           "weights": {
             "dataSchema": {
@@ -861,7 +877,6 @@
                   "type": "number"
                 },
                 "axleLoadWithLoadFrontUnit": {
-                  "default": "kg",
                   "type": "string"
                 },
                 "axleLoadWithLoadRear": {
@@ -869,7 +884,6 @@
                   "type": "number"
                 },
                 "axleLoadWithLoadRearUnit": {
-                  "default": "kg",
                   "type": "string"
                 },
                 "axleLoadWithoutLoadFront": {
@@ -877,7 +891,6 @@
                   "type": "number"
                 },
                 "axleLoadWithoutLoadFrontUnit": {
-                  "default": "kg",
                   "type": "string"
                 },
                 "axleLoadWithoutLoadRear": {
@@ -885,7 +898,6 @@
                   "type": "number"
                 },
                 "axleLoadWithoutLoadRearUnit": {
-                  "default": "kg",
                   "type": "string"
                 },
                 "batteryWeight": {
@@ -893,7 +905,6 @@
                   "type": "number"
                 },
                 "batteryWeightUnit": {
-                  "default": "kg",
                   "type": "string"
                 },
                 "serviceWeight": {
@@ -902,7 +913,6 @@
                   "type": "number"
                 },
                 "serviceWeightUnit": {
-                  "default": "kg",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -911,7 +921,6 @@
                   "type": "number"
                 },
                 "trailerLoadUnit": {
-                  "default": "kg",
                   "type": "string"
                 }
               },
@@ -922,7 +931,16 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {
+              "axleLoadWithLoadFrontUnit": "kg",
+              "axleLoadWithLoadRearUnit": "kg",
+              "axleLoadWithoutLoadFrontUnit": "kg",
+              "axleLoadWithoutLoadRearUnit": "kg",
+              "batteryWeightUnit": "kg",
+              "serviceWeightUnit": "kg",
+              "trailerLoadUnit": "kg"
+            }
           },
           "wheels": {
             "dataSchema": {
@@ -961,7 +979,8 @@
                 "set"
               ]
             },
-            "type": "entry"
+            "type": "entry",
+            "value": {}
           }
         },
         "type": "metadata"

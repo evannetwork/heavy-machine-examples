@@ -623,11 +623,11 @@
                   "minLength": 1,
                   "type": "string"
                 },
-                "maxmimumStandingPlatformHeight": {
+                "maximumStandingPlatformHeight": {
                   "default": "",
                   "type": "number"
                 },
-                "maxmimumStandingPlatformHeightUnit": {
+                "maximumStandingPlatformHeightUnit": {
                   "minLength": 1,
                   "type": "string"
                 },
@@ -680,7 +680,7 @@
               "maximumLoadCapacityUnit": "kg",
               "maximumReachUnit": "m",
               "maximumWorkingHeightUnit": "m",
-              "maxmimumStandingPlatformHeightUnit": "m",
+              "maximumStandingPlatformHeightUnit": "m",
               "rotationUnit": "° (Grad)",
               "upAndOverHeightUnit": "m"
             }

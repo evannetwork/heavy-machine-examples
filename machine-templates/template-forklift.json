@@ -17,7 +17,7 @@
     "version": "1.0.0"
   },
   "plugins": {
-    "calendar": {
+    "rentalCalendar": {
       "description": {
         "author": "Lindig",
         "dbcpVersion": 2,
@@ -88,7 +88,7 @@
         "type": "metadata"
       }
     },
-    "metadata": {
+    "Metadata": {
       "description": {
         "author": "Lindig",
         "dbcpVersion": 2,

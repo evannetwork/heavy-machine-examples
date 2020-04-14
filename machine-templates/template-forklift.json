@@ -985,53 +985,6 @@
         },
         "type": "metadata"
       }
-    },
-    "transportorders": {
-      "description": {
-        "author": "Lindig",
-        "dbcpVersion": 2,
-        "description": "",
-        "i18n": {
-          "de": {
-            "description": "",
-            "name": "Übergabeprozess",
-            "transportorders": {
-              "name": "Übergabeprozess"
-            }
-          },
-          "en": {
-            "description": "",
-            "name": "Transport Orders",
-            "transportorders": {
-              "name": "Transport Orders"
-            }
-          }
-        },
-        "name": "transportorders",
-        "version": "1.0.0"
-      },
-      "template": {
-        "properties": {
-          "transportorders": {
-            "dataSchema": {
-              "items": {
-                "default": "",
-                "minLength": 1,
-                "type": "string"
-              },
-              "type": "array"
-            },
-            "permissions": {
-              "0": [
-                "set",
-                "remove"
-              ]
-            },
-            "type": "list"
-          }
-        },
-        "type": "metadata"
-      }
     }
   }
 }

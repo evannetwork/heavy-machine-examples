@@ -108,6 +108,91 @@
       },
       "template": {
         "properties": {
+          "identity": {
+            "dataSchema": {
+              "$id": "identity_schema",
+              "properties": {
+                "chassisNumber": {
+                  "default": "",
+                  "type": "string"
+                },
+                "machineCategory": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineClass": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineId": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturerModelDesignation": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "yom": {
+                  "default": "",
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "machineClass": "Arbeitsbühne"
+            }
+          },
+          "owner": {
+            "dataSchema": {
+              "$id": "owner_schema",
+              "properties": {
+                "internalAssetDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "internalModelDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "internalSystemDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "licensePlate": {
+                  "default": "",
+                  "type": "string"
+                },
+                "owner": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
           "characteristics": {
             "dataSchema": {
               "$id": "characteristics_schema",
@@ -152,6 +237,102 @@
             "type": "entry",
             "value": {
               "profilePicture": {
+                "files": []
+              }
+            }
+          },
+          "documents": {
+            "dataSchema": {
+              "$id": "documents_schema",
+              "properties": {
+                "machinePictures": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 10,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "operaterFilm": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 3,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "operationManual": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 5,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "workingChart": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 3,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "machinePictures": {
+                "files": []
+              },
+              "operaterFilm": {
+                "files": []
+              },
+              "operationManual": {
+                "files": []
+              },
+              "workingChart": {
                 "files": []
               }
             }
@@ -259,323 +440,6 @@
               "widthUnit": "mm"
             }
           },
-          "documents": {
-            "dataSchema": {
-              "$id": "documents_schema",
-              "properties": {
-                "machinePictures": {
-                  "$comment": "{\"isEncryptedFile\": true}",
-                  "maxItems": 10,
-                  "properties": {
-                    "additionalProperties": false,
-                    "files": {
-                      "items": {
-                        "type": "string"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "files"
-                  ],
-                  "type": "object"
-                },
-                "operaterFilm": {
-                  "$comment": "{\"isEncryptedFile\": true}",
-                  "maxItems": 3,
-                  "properties": {
-                    "additionalProperties": false,
-                    "files": {
-                      "items": {
-                        "type": "string"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "files"
-                  ],
-                  "type": "object"
-                },
-                "operationManual": {
-                  "$comment": "{\"isEncryptedFile\": true}",
-                  "maxItems": 5,
-                  "properties": {
-                    "additionalProperties": false,
-                    "files": {
-                      "items": {
-                        "type": "string"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "files"
-                  ],
-                  "type": "object"
-                },
-                "workingChart": {
-                  "$comment": "{\"isEncryptedFile\": true}",
-                  "maxItems": 3,
-                  "properties": {
-                    "additionalProperties": false,
-                    "files": {
-                      "items": {
-                        "type": "string"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "files"
-                  ],
-                  "type": "object"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "machinePictures": {
-                "files": []
-              },
-              "operaterFilm": {
-                "files": []
-              },
-              "operationManual": {
-                "files": []
-              },
-              "workingChart": {
-                "files": []
-              }
-            }
-          },
-          "drive": {
-            "dataSchema": {
-              "$id": "drive_schema",
-              "properties": {
-                "awd": {
-                  "default": "",
-                  "type": "string"
-                },
-                "batteryCapacity": {
-                  "default": "",
-                  "type": "number"
-                },
-                "batteryType": {
-                  "default": "",
-                  "type": "string"
-                },
-                "batteryVoltage": {
-                  "default": "",
-                  "type": "number"
-                },
-                "capacityUnit": {
-                  "type": "string"
-                },
-                "driveType": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "powerCobustionEngine": {
-                  "default": "",
-                  "type": "number"
-                },
-                "powerUnit": {
-                  "type": "string"
-                },
-                "tankCapacity": {
-                  "default": "",
-                  "type": "number"
-                },
-                "tankCapacityUnit": {
-                  "type": "string"
-                },
-                "voltageUnit": {
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "capacityUnit": "Ah",
-              "powerUnit": "kW",
-              "tankCapacityUnit": "l",
-              "voltageUnit": "V"
-            }
-          },
-          "identity": {
-            "dataSchema": {
-              "$id": "identity_schema",
-              "properties": {
-                "chassisNumber": {
-                  "default": "",
-                  "type": "string"
-                },
-                "machineCategory": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "machineClass": {
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "machineId": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "manufacturer": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "manufacturerModelDesignation": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "yom": {
-                  "default": "",
-                  "type": "number"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "machineClass": "Arbeitsbühne"
-            }
-          },
-          "locationData": {
-            "dataSchema": {
-              "$id": "locationData_schema",
-              "properties": {
-                "actualLocation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "assignedLocation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "city": {
-                  "default": "",
-                  "type": "string"
-                },
-                "country": {
-                  "default": "",
-                  "type": "string"
-                },
-                "houseNumber": {
-                  "default": "",
-                  "type": "string"
-                },
-                "latitude": {
-                  "default": "",
-                  "type": "string"
-                },
-                "longitude": {
-                  "default": "",
-                  "type": "string"
-                },
-                "street": {
-                  "default": "",
-                  "type": "string"
-                },
-                "zipCode": {
-                  "default": "",
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {}
-          },
-          "others": {
-            "dataSchema": {
-              "$id": "others_schema",
-              "properties": {
-                "soundLevelAtOperatorsEar": {
-                  "default": "",
-                  "type": "number"
-                },
-                "soundLevelUnit": {
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "soundLevelUnit": "dbA"
-            }
-          },
-          "owner": {
-            "dataSchema": {
-              "$id": "owner_schema",
-              "properties": {
-                "internalAssetDesignation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "internalModelDesignation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "internalSystemDesignation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "licensePlate": {
-                  "default": "",
-                  "type": "string"
-                },
-                "owner": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {}
-          },
           "performance": {
             "dataSchema": {
               "$id": "performance_schema",
@@ -680,6 +544,67 @@
               "upAndOverHeightUnit": "m"
             }
           },
+          "drive": {
+            "dataSchema": {
+              "$id": "drive_schema",
+              "properties": {
+                "awd": {
+                  "default": "",
+                  "type": "string"
+                },
+                "batteryCapacity": {
+                  "default": "",
+                  "type": "number"
+                },
+                "batteryType": {
+                  "default": "",
+                  "type": "string"
+                },
+                "batteryVoltage": {
+                  "default": "",
+                  "type": "number"
+                },
+                "capacityUnit": {
+                  "type": "string"
+                },
+                "driveType": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "powerCobustionEngine": {
+                  "default": "",
+                  "type": "number"
+                },
+                "powerUnit": {
+                  "type": "string"
+                },
+                "tankCapacity": {
+                  "default": "",
+                  "type": "number"
+                },
+                "tankCapacityUnit": {
+                  "type": "string"
+                },
+                "voltageUnit": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "capacityUnit": "Ah",
+              "powerUnit": "kW",
+              "tankCapacityUnit": "l",
+              "voltageUnit": "V"
+            }
+          },
           "weights": {
             "dataSchema": {
               "$id": "weights_schema",
@@ -749,6 +674,81 @@
                 "wheelNumberRear": {
                   "default": "",
                   "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
+          "others": {
+            "dataSchema": {
+              "$id": "others_schema",
+              "properties": {
+                "soundLevelAtOperatorsEar": {
+                  "default": "",
+                  "type": "number"
+                },
+                "soundLevelUnit": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "soundLevelUnit": "dbA"
+            }
+          },
+          "locationData": {
+            "dataSchema": {
+              "$id": "locationData_schema",
+              "properties": {
+                "actualLocation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "assignedLocation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "city": {
+                  "default": "",
+                  "type": "string"
+                },
+                "country": {
+                  "default": "",
+                  "type": "string"
+                },
+                "houseNumber": {
+                  "default": "",
+                  "type": "string"
+                },
+                "latitude": {
+                  "default": "",
+                  "type": "string"
+                },
+                "longitude": {
+                  "default": "",
+                  "type": "string"
+                },
+                "street": {
+                  "default": "",
+                  "type": "string"
+                },
+                "zipCode": {
+                  "default": "",
+                  "type": "string"
                 }
               },
               "type": "object"

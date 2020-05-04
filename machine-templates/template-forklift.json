@@ -108,22 +108,96 @@
       },
       "template": {
         "properties": {
+          "identity": {
+            "dataSchema": {
+              "$id": "identity_schema",
+              "properties": {
+                "machineId": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineClass": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineCategory": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturerModelDesignation": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "yom": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "chassisNumber": {
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "machineClass": "Flurförderzeug"
+            }
+          },
+          "owner": {
+            "dataSchema": {
+              "$id": "owner_schema",
+              "properties": {
+                "internalAssetDesignation": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "internalSystemDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "internalModelDesignation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "licensePlate": {
+                  "default": "",
+                  "type": "string"
+                },
+                "owner": {
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
           "characteristics": {
             "dataSchema": {
               "$id": "characteristics_schema",
               "properties": {
-                "certificateOfQualification": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "licenseClass": {
-                  "type": "string"
-                },
-                "licenseRequired": {
-                  "type": "string"
-                },
                 "profilePicture": {
                   "$comment": "{\"isEncryptedFile\": true}",
                   "maxItems": 1,
@@ -140,6 +214,15 @@
                     "files"
                   ],
                   "type": "object"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "licenseClass": {
+                  "type": "string"
+                },
+                "certificateOfQualification": {
+                  "type": "string"
                 }
               },
               "type": "object"
@@ -157,149 +240,15 @@
               "certificateOfQualification": "---",
               "color": "---",
               "licenseClass": "---",
-              "licenseRequired": "---",
               "profilePicture": {
                 "files": []
               }
-            }
-          },
-          "dimensions": {
-            "dataSchema": {
-              "$id": "dimensions_schema",
-              "properties": {
-                "forkCarriageWidth": {
-                  "default": "",
-                  "type": "number"
-                },
-                "forkCarriageWidthUnit": {
-                  "type": "string"
-                },
-                "forkHeight": {
-                  "default": "",
-                  "type": "number"
-                },
-                "forkHeightUnit": {
-                  "type": "string"
-                },
-                "forkLength": {
-                  "default": "",
-                  "type": "number"
-                },
-                "forkLengthUnit": {
-                  "type": "string"
-                },
-                "forkWidth": {
-                  "default": "",
-                  "type": "number"
-                },
-                "forkWidthUnit": {
-                  "type": "string"
-                },
-                "groundClearance": {
-                  "default": "",
-                  "type": "number"
-                },
-                "groundClearanceUnit": {
-                  "type": "string"
-                },
-                "heightOfOvergheadGuard": {
-                  "default": 0,
-                  "type": "number"
-                },
-                "heightOfOvergheadGuardUnit": {
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "lengthToForkFace": {
-                  "default": "",
-                  "type": "number"
-                },
-                "lengthToForkFaceUnit": {
-                  "type": "string"
-                },
-                "overallLength": {
-                  "default": "",
-                  "type": "number"
-                },
-                "overallLengthUnit": {
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "overallWidth": {
-                  "default": "",
-                  "type": "number"
-                },
-                "overallWidthUnit": {
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "wheelbase": {
-                  "default": "",
-                  "type": "number"
-                },
-                "wheelbaseUnit": {
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "forkCarriageWidthUnit": "mm",
-              "forkHeightUnit": "mm",
-              "forkLengthUnit": "mm",
-              "forkWidthUnit": "mm",
-              "groundClearanceUnit": "mm",
-              "heightOfOvergheadGuardUnit": "mm",
-              "lengthToForkFaceUnit": "mm",
-              "overallLengthUnit": "mm",
-              "overallWidthUnit": "mm",
-              "wheelbaseUnit": "mm"
             }
           },
           "documents": {
             "dataSchema": {
               "$id": "documents_schema",
               "properties": {
-                "machinePictures": {
-                  "$comment": "{\"isEncryptedFile\": true}",
-                  "maxItems": 10,
-                  "properties": {
-                    "additionalProperties": false,
-                    "files": {
-                      "items": {
-                        "type": "string"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "files"
-                  ],
-                  "type": "object"
-                },
-                "operaterFilm": {
-                  "$comment": "{\"isEncryptedFile\": true}",
-                  "maxItems": 3,
-                  "properties": {
-                    "additionalProperties": false,
-                    "files": {
-                      "items": {
-                        "type": "string"
-                      },
-                      "type": "array"
-                    }
-                  },
-                  "required": [
-                    "files"
-                  ],
-                  "type": "object"
-                },
                 "operationManual": {
                   "$comment": "{\"isEncryptedFile\": true}",
                   "maxItems": 5,
@@ -318,6 +267,40 @@
                   "type": "object"
                 },
                 "workingChart": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 3,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "machinePictures": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 10,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "operaterFilm": {
                   "$comment": "{\"isEncryptedFile\": true}",
                   "maxItems": 3,
                   "properties": {
@@ -358,48 +341,81 @@
               }
             }
           },
-          "drive": {
+          "dimensions": {
             "dataSchema": {
+              "$id": "dimensions_schema",
               "properties": {
-                "awd": {
-                  "default": "",
-                  "type": "string"
-                },
-                "batteryCapacity": {
-                  "default": "",
+                "heightOfOvergheadGuard": {
+                  "default": 0,
                   "type": "number"
                 },
-                "batteryType": {
-                  "default": "",
-                  "type": "string"
-                },
-                "batteryVoltage": {
-                  "default": "",
-                  "type": "number"
-                },
-                "capacityUnit": {
-                  "type": "string"
-                },
-                "driveType": {
-                  "default": "",
+                "heightOfOvergheadGuardUnit": {
                   "minLength": 1,
                   "type": "string"
                 },
-                "powerCombustionEngine": {
+                "overallWidth": {
                   "default": "",
                   "type": "number"
                 },
-                "powerUnit": {
+                "overallWidthUnit": {
+                  "minLength": 1,
                   "type": "string"
                 },
-                "tankCapaciityUnit": {
-                  "type": "string"
-                },
-                "tankCapacity": {
+                "overallLength": {
                   "default": "",
                   "type": "number"
                 },
-                "voltageUnit": {
+                "overallLengthUnit": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "lengthToForkFace": {
+                  "default": "",
+                  "type": "number"
+                },
+                "lengthToForkFaceUnit": {
+                  "type": "string"
+                },
+                "forkWidth": {
+                  "default": "",
+                  "type": "number"
+                },
+                "forkWidthUnit": {
+                  "type": "string"
+                },
+                "forkHeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "forkHeightUnit": {
+                  "type": "string"
+                },
+                "forkLength": {
+                  "default": "",
+                  "type": "number"
+                },
+                "forkLengthUnit": {
+                  "type": "string"
+                },
+                "forkCarriageWidth": {
+                  "default": "",
+                  "type": "number"
+                },
+                "forkCarriageWidthUnit": {
+                  "type": "string"
+                },
+                "wheelbase": {
+                  "default": "",
+                  "type": "number"
+                },
+                "wheelbaseUnit": {
+                  "type": "string"
+                },
+                "groundClearance": {
+                  "default": "",
+                  "type": "number"
+                },
+                "groundClearanceUnit": {
                   "type": "string"
                 }
               },
@@ -412,99 +428,119 @@
             },
             "type": "entry",
             "value": {
-              "capacityUnit": "Ah",
-              "powerUnit": "kW",
-              "tankCapaciityUnit": "l",
-              "voltageUnit": "V"
+              "forkCarriageWidthUnit": "mm",
+              "forkHeightUnit": "mm",
+              "forkLengthUnit": "mm",
+              "forkWidthUnit": "mm",
+              "groundClearanceUnit": "mm",
+              "heightOfOvergheadGuardUnit": "mm",
+              "lengthToForkFaceUnit": "mm",
+              "overallLengthUnit": "mm",
+              "overallWidthUnit": "mm",
+              "wheelbaseUnit": "mm"
             }
           },
-          "equipment": {
+          "performance": {
             "dataSchema": {
               "properties": {
-                "accessory1": {
+                "maximumLoadCapacity": {
                   "default": "",
-                  "type": "string"
+                  "type": "number"
                 },
-                "accessory2": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory3": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory4": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory5": {
-                  "default": "",
-                  "type": "string"
-                },
-                "additionalHydraulicsToValve": {
-                  "default": "",
-                  "type": "string"
-                },
-                "additionalHyraulicsComplete": {
-                  "default": "",
-                  "type": "string"
-                },
-                "cabin": {
-                  "default": "",
+                "maximumLoadCapacityUnit": {
                   "minLength": 1,
                   "type": "string"
                 },
-                "pedal": {
+                "travelSpeedWithLoad": {
                   "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {}
-          },
-          "identity": {
-            "dataSchema": {
-              "$id": "identity_schema",
-              "properties": {
-                "chassisNumber": {
+                  "type": "number"
+                },
+                "travelSpeedWithoutLoad": {
                   "default": "",
+                  "type": "number"
+                },
+                "travelSpeedUnit": {
                   "type": "string"
                 },
-                "machineCategory": {
+                "liftingSpeedWithLoad": {
                   "default": "",
-                  "minLength": 1,
+                  "type": "number"
+                },
+                "liftingSpeedWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "liftingSpeedUnit": {
                   "type": "string"
                 },
-                "machineClass": {
-                  "minLength": 1,
+                "loweringSpeedWithLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "loweringSpeedWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "loweringSpeedUnit": {
                   "type": "string"
                 },
-                "machineId": {
+                "tractiveForceWithLoad": {
                   "default": "",
-                  "minLength": 1,
+                  "type": "number"
+                },
+                "tractiveForceWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "tractiveForceLoadUnit": {
                   "type": "string"
                 },
-                "manufacturer": {
+                "maximumTractiveForceWithLoad": {
                   "default": "",
-                  "minLength": 1,
+                  "type": "number"
+                },
+                "maximumTractiveForceWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maximumTractiveForceLoadUnit": {
                   "type": "string"
                 },
-                "manufacturerModelDesignation": {
+                "climbingAbilityWithLoad": {
                   "default": "",
-                  "minLength": 1,
+                  "type": "number"
+                },
+                "climbingAbilityWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "climbingAbilityLoadUnit": {
                   "type": "string"
                 },
-                "yom": {
+                "maximumClimbingAbilityWithLoad": {
                   "default": "",
-                  "minLength": 1,
+                  "type": "number"
+                },
+                "maximumClimbingAbilityWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "maximumClimbingAbilityLoadUnit": {
+                  "type": "string"
+                },
+                "accelerationTimeWithLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "accelerationTimeWithoutLoad": {
+                  "default": "",
+                  "type": "number"
+                },
+                "accelerationTimeLoadUnit": {
+                  "type": "string"
+                },
+                "serviceBreak": {
+                  "default": "",
                   "type": "string"
                 }
               },
@@ -517,75 +553,32 @@
             },
             "type": "entry",
             "value": {
-              "machineClass": "Flurförderzeug"
+              "accelerationTimeLoadUnit": "s",
+              "climbingAbilityLoadUnit": "%",
+              "liftingSpeedUnit": "m / s",
+              "loweringSpeedUnit": "m / s",
+              "maximumClimbingAbilityLoadUnit": "%",
+              "maximumLoadCapacityUnit": "kg",
+              "maximumTractiveForceLoadUnit": "N",
+              "tractiveForceLoadUnit": "N",
+              "travelSpeedUnit": "km / h"
             }
-          },
-          "locationData": {
-            "dataSchema": {
-              "properties": {
-                "actualLocation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "assignedLocation": {
-                  "default": "",
-                  "type": "string"
-                },
-                "city": {
-                  "default": "",
-                  "type": "string"
-                },
-                "country": {
-                  "default": "",
-                  "type": "string"
-                },
-                "houseNumber": {
-                  "default": "",
-                  "type": "number"
-                },
-                "latitude": {
-                  "default": "",
-                  "type": "string"
-                },
-                "longitude": {
-                  "default": "",
-                  "type": "string"
-                },
-                "street": {
-                  "default": "",
-                  "type": "string"
-                },
-                "zipCode": {
-                  "default": "",
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {}
           },
           "mast": {
             "dataSchema": {
               "properties": {
-                "axleCentreToForkFace": {
+                "mastCarriageTilt": {
+                  "default": "",
+                  "type": "string"
+                },
+                "mastCarriageTiltUnit": {
+                  "type": "string"
+                },
+                "heightOfMastLowered": {
                   "default": "",
                   "type": "number"
                 },
-                "axleCentreToForkFaceUnit": {
-                  "type": "string"
-                },
-                "externalAttachtment": {
-                  "default": "",
-                  "type": "string"
-                },
-                "forkCarriageType": {
-                  "default": "",
+                "heightOfMastLoweredUnit": {
                   "type": "string"
                 },
                 "freeLift": {
@@ -595,18 +588,11 @@
                 "freeLiftUnit": {
                   "type": "string"
                 },
-                "heightOfMastExtendedUnit": {
-                  "type": "string"
-                },
-                "heightOfMastExtented": {
-                  "default": 0,
-                  "type": "number"
-                },
-                "heightOfMastLowered": {
+                "lift": {
                   "default": "",
                   "type": "number"
                 },
-                "heightOfMastLoweredUnit": {
+                "liftUnit": {
                   "type": "string"
                 },
                 "initialLift": {
@@ -616,15 +602,15 @@
                 "initialLiftUnit": {
                   "type": "string"
                 },
-                "integratedAttachment": {
-                  "default": "",
-                  "type": "string"
-                },
-                "lift": {
-                  "default": "",
+                "heightOfMastExtended": {
+                  "default": 0,
                   "type": "number"
                 },
-                "liftUnit": {
+                "heightOfMastExtendedUnit": {
+                  "type": "string"
+                },
+                "forkCarriageType": {
+                  "default": "",
                   "type": "string"
                 },
                 "loadCentre": {
@@ -634,11 +620,19 @@
                 "loadCentreUnit": {
                   "type": "string"
                 },
-                "mastCarriageTilt": {
+                "axleCentreToForkFace": {
+                  "default": "",
+                  "type": "number"
+                },
+                "axleCentreToForkFaceUnit": {
+                  "type": "string"
+                },
+                "integratedAttachment": {
                   "default": "",
                   "type": "string"
                 },
-                "mastCarriageTiltUnit": {
+                "externalAttachtment": {
+                  "default": "",
                   "type": "string"
                 },
                 "mastType": {
@@ -666,71 +660,44 @@
               "mastCarriageTiltUnit": "°"
             }
           },
-          "others": {
+          "equipment": {
             "dataSchema": {
               "properties": {
-                "oilFlowForAttachments": {
-                  "default": 0,
-                  "type": "number"
-                },
-                "operatingPressureForAttachments": {
-                  "default": 0,
-                  "type": "number"
-                },
-                "pressureUnit": {
-                  "type": "string"
-                },
-                "quantityUnit": {
-                  "type": "string"
-                },
-                "soundLevelAtOperatorsEar": {
-                  "default": "",
-                  "type": "number"
-                },
-                "soundLevelUnit": {
-                  "type": "string"
-                },
-                "typeOfDriveControl": {
-                  "default": "",
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "pressureUnit": "bar",
-              "quantityUnit": "l / min",
-              "soundLevelUnit": "dbA"
-            }
-          },
-          "owner": {
-            "dataSchema": {
-              "$id": "owner_schema",
-              "properties": {
-                "internalAssetDesignation": {
+                "cabin": {
                   "default": "",
                   "minLength": 1,
                   "type": "string"
                 },
-                "internalModelDesignation": {
+                "pedal": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "additionalHyraulicsComplete": {
                   "default": "",
                   "type": "string"
                 },
-                "internalSystemDesignation": {
+                "additionalHydraulicsToValve": {
                   "default": "",
                   "type": "string"
                 },
-                "licensePlate": {
+                "accessory1": {
                   "default": "",
                   "type": "string"
                 },
-                "owner": {
+                "accessory2": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory3": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory4": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory5": {
                   "default": "",
                   "type": "string"
                 }
@@ -745,108 +712,49 @@
             "type": "entry",
             "value": {}
           },
-          "performance": {
+          "drive": {
             "dataSchema": {
               "properties": {
-                "accelerationTimeLoadUnit": {
-                  "type": "string"
-                },
-                "accelerationTimeWithLoad": {
+                "driveType": {
                   "default": "",
-                  "type": "number"
-                },
-                "accelerationTimeWithoutLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "climbingAbilityLoadUnit": {
-                  "type": "string"
-                },
-                "climbingAbilityWithLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "climbingAbilityWithoutLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "liftingSpeedUnit": {
-                  "type": "string"
-                },
-                "liftingSpeedWithLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "liftingSpeedWithoutLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "loweringSpeedUnit": {
-                  "type": "string"
-                },
-                "loweringSpeedWithLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "loweringSpeedWithoutLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "maximumClimbingAbilityLoadUnit": {
-                  "type": "string"
-                },
-                "maximumClimbingAbilityWithLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "maximumClimbingAbilityWithoutLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "maximumLoadCapacity": {
-                  "default": "",
-                  "type": "number"
-                },
-                "maximumLoadCapacityUnit": {
                   "minLength": 1,
                   "type": "string"
                 },
-                "maximumTractiveForceLoadUnit": {
+                "batteryVoltage": {
+                  "default": "",
+                  "type": "number"
+                },
+                "voltageUnit": {
                   "type": "string"
                 },
-                "maximumTractiveForceWithLoad": {
+                "batteryCapacity": {
                   "default": "",
                   "type": "number"
                 },
-                "maximumTractiveForceWithoutLoad": {
-                  "default": "",
-                  "type": "number"
+                "capacityUnit": {
+                  "type": "string"
                 },
-                "serviceBreak": {
+                "batteryType": {
                   "default": "",
                   "type": "string"
                 },
-                "tractiveForceLoadUnit": {
+                "awd": {
+                  "default": "",
                   "type": "string"
                 },
-                "tractiveForceWithLoad": {
+                "tankCapacity": {
                   "default": "",
                   "type": "number"
                 },
-                "tractiveForceWithoutLoad": {
-                  "default": "",
-                  "type": "number"
-                },
-                "travelSpeedUnit": {
+                "tankCapacityUnit": {
                   "type": "string"
                 },
-                "travelSpeedWithLoad": {
+                "powerCombustionEngine": {
                   "default": "",
                   "type": "number"
                 },
-                "travelSpeedWithoutLoad": {
-                  "default": "",
-                  "type": "number"
+                "powerUnit": {
+                  "type": "string"
                 }
               },
               "type": "object"
@@ -858,20 +766,31 @@
             },
             "type": "entry",
             "value": {
-              "accelerationTimeLoadUnit": "s",
-              "climbingAbilityLoadUnit": "%",
-              "liftingSpeedUnit": "m / s",
-              "loweringSpeedUnit": "m / s",
-              "maximumClimbingAbilityLoadUnit": "%",
-              "maximumLoadCapacityUnit": "kg",
-              "maximumTractiveForceLoadUnit": "N",
-              "tractiveForceLoadUnit": "N",
-              "travelSpeedUnit": "km / h"
+              "capacityUnit": "Ah",
+              "powerUnit": "kW",
+              "tankCapaciityUnit": "l",
+              "voltageUnit": "V"
             }
           },
           "weights": {
             "dataSchema": {
               "properties": {
+                "serviceWeight": {
+                  "default": "",
+                  "minimum": 1,
+                  "type": "number"
+                },
+                "serviceWeightUnit": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "batteryWeight": {
+                  "default": "",
+                  "type": "number"
+                },
+                "batteryWeightUnit": {
+                  "type": "string"
+                },
                 "axleLoadWithLoadFront": {
                   "default": "",
                   "type": "number"
@@ -898,22 +817,6 @@
                   "type": "number"
                 },
                 "axleLoadWithoutLoadRearUnit": {
-                  "type": "string"
-                },
-                "batteryWeight": {
-                  "default": "",
-                  "type": "number"
-                },
-                "batteryWeightUnit": {
-                  "type": "string"
-                },
-                "serviceWeight": {
-                  "default": "",
-                  "minimum": 1,
-                  "type": "number"
-                },
-                "serviceWeightUnit": {
-                  "minLength": 1,
                   "type": "string"
                 },
                 "trailerLoad": {
@@ -945,22 +848,22 @@
           "wheels": {
             "dataSchema": {
               "properties": {
-                "auxiliaryWheels": {
+                "tireType": {
                   "default": "",
+                  "minLength": 1,
                   "type": "string"
                 },
                 "markingNonMarking": {
                   "default": "",
                   "type": "string"
                 },
-                "tireType": {
+                "wheelNumber": {
                   "default": "",
                   "minLength": 1,
                   "type": "string"
                 },
-                "wheelNumber": {
+                "auxiliaryWheels": {
                   "default": "",
-                  "minLength": 1,
                   "type": "string"
                 },
                 "wheelNumberDriveSide": {
@@ -970,6 +873,99 @@
                 "wheelNumberLoadSide": {
                   "default": 0,
                   "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
+          "others": {
+            "dataSchema": {
+              "properties": {
+                "soundLevelAtOperatorsEar": {
+                  "default": "",
+                  "type": "number"
+                },
+                "soundLevelUnit": {
+                  "type": "string"
+                },
+                "typeOfDriveControl": {
+                  "default": "",
+                  "type": "string"
+                },
+                "operatingPressureForAttachments": {
+                  "default": 0,
+                  "type": "number"
+                },
+                "pressureUnit": {
+                  "type": "string"
+                },
+                "oilFlowForAttachments": {
+                  "default": 0,
+                  "type": "number"
+                },
+                "quantityUnit": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "pressureUnit": "bar",
+              "quantityUnit": "l / min",
+              "soundLevelUnit": "dbA"
+            }
+          },
+          "locationData": {
+            "dataSchema": {
+              "properties": {
+                "assignedLocation": {
+                  "default": "",
+                  "type": "string"
+                },
+                "street": {
+                  "default": "",
+                  "type": "string"
+                },
+                "houseNumber": {
+                  "default": "",
+                  "type": "number"
+                },
+                "zipCode": {
+                  "default": "",
+                  "type": "string"
+                },
+                "city": {
+                  "default": "",
+                  "type": "string"
+                },
+                "country": {
+                  "default": "",
+                  "type": "string"
+                },
+                "latitude": {
+                  "default": "",
+                  "type": "string"
+                },
+                "longitude": {
+                  "default": "",
+                  "type": "string"
+                },
+                "actualLocation": {
+                  "default": "",
+                  "type": "string"
                 }
               },
               "type": "object"

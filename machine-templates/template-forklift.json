@@ -139,7 +139,7 @@
                 "yom": {
                   "default": "",
                   "minLength": 1,
-                  "type": "string"
+                  "type": "number"
                 },
                 "chassisNumber": {
                   "default": "",

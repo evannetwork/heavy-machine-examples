@@ -564,154 +564,6 @@
               "travelSpeedUnit": "km / h"
             }
           },
-          "mast": {
-            "dataSchema": {
-              "properties": {
-                "mastCarriageTilt": {
-                  "default": "",
-                  "type": "string"
-                },
-                "mastCarriageTiltUnit": {
-                  "type": "string"
-                },
-                "heightOfMastLowered": {
-                  "default": "",
-                  "type": "number"
-                },
-                "heightOfMastLoweredUnit": {
-                  "type": "string"
-                },
-                "freeLift": {
-                  "default": "",
-                  "type": "number"
-                },
-                "freeLiftUnit": {
-                  "type": "string"
-                },
-                "lift": {
-                  "default": "",
-                  "type": "number"
-                },
-                "liftUnit": {
-                  "type": "string"
-                },
-                "initialLift": {
-                  "default": "",
-                  "type": "string"
-                },
-                "initialLiftUnit": {
-                  "type": "string"
-                },
-                "heightOfMastExtended": {
-                  "default": 0,
-                  "type": "number"
-                },
-                "heightOfMastExtendedUnit": {
-                  "type": "string"
-                },
-                "forkCarriageType": {
-                  "default": "",
-                  "type": "string"
-                },
-                "loadCentre": {
-                  "default": "",
-                  "type": "number"
-                },
-                "loadCentreUnit": {
-                  "type": "string"
-                },
-                "axleCentreToForkFace": {
-                  "default": "",
-                  "type": "number"
-                },
-                "axleCentreToForkFaceUnit": {
-                  "type": "string"
-                },
-                "integratedAttachment": {
-                  "default": "",
-                  "type": "string"
-                },
-                "externalAttachtment": {
-                  "default": "",
-                  "type": "string"
-                },
-                "mastType": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {
-              "axleCentreToForkFaceUnit": "m",
-              "freeLiftUnit": "mm",
-              "heightOfMastExtendedUnit": "mm",
-              "heightOfMastLoweredUnit": "mm",
-              "initialLiftUnit": "mm",
-              "liftUnit": "mm",
-              "loadCentreUnit": "m",
-              "mastCarriageTiltUnit": "°"
-            }
-          },
-          "equipment": {
-            "dataSchema": {
-              "properties": {
-                "cabin": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "pedal": {
-                  "default": "",
-                  "minLength": 1,
-                  "type": "string"
-                },
-                "additionalHyraulicsComplete": {
-                  "default": "",
-                  "type": "string"
-                },
-                "additionalHydraulicsToValve": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory1": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory2": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory3": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory4": {
-                  "default": "",
-                  "type": "string"
-                },
-                "accessory5": {
-                  "default": "",
-                  "type": "string"
-                }
-              },
-              "type": "object"
-            },
-            "permissions": {
-              "0": [
-                "set"
-              ]
-            },
-            "type": "entry",
-            "value": {}
-          },
           "drive": {
             "dataSchema": {
               "properties": {
@@ -964,6 +816,154 @@
                   "type": "string"
                 },
                 "actualLocation": {
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
+		  "mast": {
+            "dataSchema": {
+              "properties": {
+                "mastCarriageTilt": {
+                  "default": "",
+                  "type": "string"
+                },
+                "mastCarriageTiltUnit": {
+                  "type": "string"
+                },
+                "heightOfMastLowered": {
+                  "default": "",
+                  "type": "number"
+                },
+                "heightOfMastLoweredUnit": {
+                  "type": "string"
+                },
+                "freeLift": {
+                  "default": "",
+                  "type": "number"
+                },
+                "freeLiftUnit": {
+                  "type": "string"
+                },
+                "lift": {
+                  "default": "",
+                  "type": "number"
+                },
+                "liftUnit": {
+                  "type": "string"
+                },
+                "initialLift": {
+                  "default": "",
+                  "type": "string"
+                },
+                "initialLiftUnit": {
+                  "type": "string"
+                },
+                "heightOfMastExtended": {
+                  "default": 0,
+                  "type": "number"
+                },
+                "heightOfMastExtendedUnit": {
+                  "type": "string"
+                },
+                "forkCarriageType": {
+                  "default": "",
+                  "type": "string"
+                },
+                "loadCentre": {
+                  "default": "",
+                  "type": "number"
+                },
+                "loadCentreUnit": {
+                  "type": "string"
+                },
+                "axleCentreToForkFace": {
+                  "default": "",
+                  "type": "number"
+                },
+                "axleCentreToForkFaceUnit": {
+                  "type": "string"
+                },
+                "integratedAttachment": {
+                  "default": "",
+                  "type": "string"
+                },
+                "externalAttachtment": {
+                  "default": "",
+                  "type": "string"
+                },
+                "mastType": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "axleCentreToForkFaceUnit": "m",
+              "freeLiftUnit": "mm",
+              "heightOfMastExtendedUnit": "mm",
+              "heightOfMastLoweredUnit": "mm",
+              "initialLiftUnit": "mm",
+              "liftUnit": "mm",
+              "loadCentreUnit": "m",
+              "mastCarriageTiltUnit": "°"
+            }
+          },
+          "equipment": {
+            "dataSchema": {
+              "properties": {
+                "cabin": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "pedal": {
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "additionalHyraulicsComplete": {
+                  "default": "",
+                  "type": "string"
+                },
+                "additionalHydraulicsToValve": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory1": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory2": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory3": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory4": {
+                  "default": "",
+                  "type": "string"
+                },
+                "accessory5": {
                   "default": "",
                   "type": "string"
                 }

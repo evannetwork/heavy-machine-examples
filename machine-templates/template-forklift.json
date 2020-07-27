@@ -916,13 +916,13 @@
             },
             "type": "entry",
             "value": {
-              "axleCentreToForkFaceUnit": "m",
+              "axleCentreToForkFaceUnit": "mm",
               "freeLiftUnit": "mm",
               "heightOfMastExtendedUnit": "mm",
               "heightOfMastLoweredUnit": "mm",
               "initialLiftUnit": "mm",
               "liftUnit": "mm",
-              "loadCentreUnit": "m",
+              "loadCentreUnit": "mm",
               "mastCarriageTiltUnit": "°"
             }
           },

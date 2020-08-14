@@ -1,0 +1,780 @@
+{
+  "description": {
+    "author": "BAXXLER Team",
+    "dbcpVersion": 2,
+    "description": "",
+    "i18n": {
+      "de": {
+        "description": "",
+        "name": "Schlepper & Plattformwagen"
+      },
+      "en": {
+        "description": "",
+        "name": "Tow Tractors & Electric-Platform Tractor"
+      }
+    },
+    "name": "tow_tractors_and_electric_platform_tractor",
+    "version": "1.3.2"
+  },
+  "plugins": {
+    "rentalCalendar": {
+      "description": {
+        "author": "BAXXLER Team",
+        "dbcpVersion": 2,
+        "description": "",
+        "i18n": {
+          "de": {
+            "calendar": {
+              "name": "Mietkalender"
+            },
+            "description": "",
+            "name": "Mietkalender"
+          },
+          "en": {
+            "calendar": {
+              "name": "Rental calendar"
+            },
+            "description": "",
+            "name": "Rental calendar"
+          }
+        },
+        "name": "Rental calendar",
+        "version": "1.3.2"
+      },
+      "template": {
+        "properties": {
+          "calendar": {
+            "dataSchema": {
+              "items": {
+                "properties": {
+                  "from": {
+				    "description": "Von",
+                    "default": "",
+                    "type": "number"
+                  },
+				  "to": {
+				    "description": "Bis",
+                    "default": "",
+                    "type": "number"
+                  },
+				  "type": {
+				    "description": "Type",
+                    "default": "",
+                    "type": "string"
+                  },
+				  "details": {
+                    "properties": {
+					  "rental-preparation": {
+					    "description": "Vorlauf",
+						"default": "",
+						"type": "string"
+					  },
+					  "rental-period": {
+					    "description": "Nutzungszeitraum",
+						"default": "",
+						"type": "string"
+					  },
+					  "rental-puffer": {
+					    "description": "Puffer",
+						"default": "",
+						"type": "string"
+					  }
+					},
+                    "type": "object"
+                  },
+                  "orderDetails": {
+                    "properties": {
+					  "ordernumber": {
+						"description": "Vorgangsnummer",
+						"default": "",
+						"type": "string"
+					  },
+					  "app": {
+						"description": "Anwendung",
+					    "default": "",
+					    "type": "string"
+					  },
+					  "transportType": {
+						"description": "Lieferart",
+					    "default": "",
+					    "type": "string"
+					  },
+					  "street": {
+						"description": "Straße",
+					    "default": "",
+					    "type": "string"
+					  },
+					  "housenumber": {
+						"description": "Hausnummer",
+					    "default": "",
+					    "type": "string"
+					  },
+					  "zipcode": {
+						"description": "PLZ",
+					    "default": "",
+					    "type": "string"
+					  },
+					  "city": {
+						"description": "Stadt",
+					    "default": "",
+					    "type": "string"
+					  }
+					},
+                    "type": "object"
+                  },
+                  "orderHistory": {
+                    "properties": {
+					  "created": {
+						"description": "Erstellt",
+						"default": "",
+						"type": "string"
+					  },
+					  "createdby": {
+						"description": "Ersteller",
+					    "default": "",
+					    "type": "string"
+					  }
+					},
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "permissions": {
+              "0": [
+                "set",
+                "remove"
+              ]
+            },
+            "type": "list"
+          }
+        },
+        "type": "metadata"
+      }
+    },
+    "Metadata": {
+      "description": {
+        "author": "BAXXLER Team",
+        "dbcpVersion": 2,
+        "description": "",
+        "i18n": {
+          "de": {
+            "description": "",
+            "name": "Produktdaten"
+          },
+          "en": {
+            "description": "",
+            "name": "Product data"
+          }
+        },
+        "name": "metadata",
+        "version": "1.3.2"
+      },
+      "template": {
+        "properties": {
+          "identity": {
+            "dataSchema": {
+              "$id": "identity_schema",
+              "properties": {
+                "machineId": {
+				  "description": "Seriennummer",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturer": {
+				  "description": "Hersteller",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineClass": {
+				  "description": "Geräteklasse",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "machineCategory": {
+				  "description": "Bauart",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "manufacturerModelDesignation": {
+				  "description": "Typzeichen des Hersteller",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "yom": {
+				  "description": "Baujahr",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "number"
+                },
+				"series": {
+				  "description": "Baureihe",
+                  "default": "",
+                  "type": "string"
+                },
+                "chassisNumber": {
+				  "description": "Fahrgestellnummer",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "machineClass": "Flurförderzeug"
+            }
+          },
+          "owner": {
+            "dataSchema": {
+              "$id": "owner_schema",
+              "properties": {
+				"owner": {
+				  "description": "Eigentümer",
+                  "default": "",
+                  "minLength": 1,
+				  "type": "string"
+                },
+                "internalAssetDesignation": {
+				  "description": "interne Bezeichnung",
+                  "default": "",
+                  "type": "string"
+                },
+                "internalSystemDesignation": {
+				  "description": "(IT)Systembezeichnung",
+                  "default": "",
+                  "type": "string"
+                },
+                "internalModelDesignation": {
+				  "description": "",
+                  "default": "",
+                  "type": "string"
+                },
+                "licensePlate": {
+				  "description": "",
+                  "default": "",
+                  "type": "string"
+                },
+
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
+		  "locationData": {
+            "dataSchema": {
+              "properties": {
+                "assignedLocation": {
+				  "description": "zugeordneter Mietstandort",
+                  "default": "",
+                  "type": "string"
+                },
+                "street": {
+				  "description": "Straße",
+                  "default": "",
+                  "type": "string"
+                },
+                "houseNumber": {
+                  "description": "Hausnummer",
+				  "default": "",
+                  "type": "number"
+                },
+                "zipCode": {
+                  "description": "PLZ",
+				  "default": "",
+                  "type": "string"
+                },
+                "city": {
+                  "description": "Stadt",
+				  "default": "",
+                  "type": "string"
+                },
+                "country": {
+                  "description": "Land",
+				  "default": "",
+                  "type": "string"
+                },
+                "latitude": {
+                  "description": "Breitengrad",
+				  "default": "",
+                  "type": "string"
+                },
+                "longitude": {
+                  "description": "Längengrad",
+				  "default": "",
+                  "type": "string"
+                },
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
+          "characteristics": {
+            "dataSchema": {
+              "$id": "characteristics_schema",
+              "properties": {
+                "profilePicture": {
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 1,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "color": {
+				  "description": "Farbe",
+				  "default": "",
+                  "type": "string"
+                },
+                "licenseClass": {
+                  "description": "Führerscheinklasse",
+				  "default": "",
+				  "type": "string"
+                },
+                "certificateOfQualification": {
+                  "description": "Befähigungsnachweis",
+				  "default": "Ja",
+                  "minLength": 1,
+				  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ],
+              "64": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "certificateOfQualification": "---",
+              "color": "---",
+              "licenseClass": "---",
+              "profilePicture": {
+                "files": []
+              }
+            }
+          },
+          "documents": {
+            "dataSchema": {
+              "$id": "documents_schema",
+              "properties": {
+                "operationManual": {
+				  "description": "Bedienungsanleitung",
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 100,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "workingChart": {
+				  "description": "Arbeitsdiagramm",
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 100,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "machinePictures": {
+				  "description": "Bedienvideos",
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 100,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                },
+                "operaterFilm": {
+				  "description": "Maschinenbilder",
+                  "$comment": "{\"isEncryptedFile\": true}",
+                  "maxItems": 100,
+                  "properties": {
+                    "additionalProperties": false,
+                    "files": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "required": [
+                    "files"
+                  ],
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "machinePictures": {
+                "files": []
+              },
+              "operaterFilm": {
+                "files": []
+              },
+              "operationManual": {
+                "files": []
+              },
+              "workingChart": {
+                "files": []
+              }
+            }
+          },
+          "dimensions": {
+            "dataSchema": {
+              "$id": "dimensions_schema",
+              "properties": {
+                "heightOfOvergheadGuard": {
+				  "description": "Höhe über Schutzdach (Kabine)",
+                  "default": 0,
+                  "type": "number"
+                },
+                "heightOfOvergheadGuardUnit": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "overallWidth": {
+				  "description": "Gesamtbreite",
+                  "default": 0,
+                  "minLength": 1,
+				  "type": "number"
+                },
+                "overallWidthUnit": {
+				  "description": "Breiteneinheit",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "overallLength": {
+				  "description": "Gesamtlänge",
+                  "default": 0,
+                  "type": "number"
+                },
+                "overallLengthUnit": {
+                  "description": "Längeneinheit",
+				  "default": "",
+                  "type": "string"
+                },
+				"platformLength": {
+                  "description": "Plattformlänge",
+				  "default": "",
+                  "type": "number"
+                },
+				"platformLengthUnit": {
+                  "description": "Längeneinheit",
+				  "default": "",
+                  "type": "string"
+                },
+				"platformWidth": {
+                  "description": "Plattformbreite",
+				  "default": "",
+                  "type": "number"
+                },
+				"platformWidthUnit": {
+                  "description": "Breiteneinheit",
+				  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+			  "heightOfOvergheadGuardUnit": "mm",
+			  "overallWidthUnit": "mm",
+			  "overallLengthUnit": "mm",
+			  "platformLengthUnit": "mm",
+			  "platformWidthUnit": "mm"
+            }
+          },
+          "performance": {
+            "dataSchema": {
+              "properties": {
+                "maximumLoadCapacity": {
+				  "description": "maximale Tragfähigkeit",
+                  "default": 0,
+				  "minLength": 1,
+                  "type": "number"
+                },
+                "maximumLoadCapacityUnit": {
+                  "description": "Gewichtseinheit",
+				  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "maximumLoadCapacityUnit": "kg"
+            }
+          },
+          "drive": {
+            "dataSchema": {
+              "properties": {
+                "driveType": {
+				  "description": "Antriebsart",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "batteryVoltage": {
+                  "description": "Batteriespannung",
+				  "default": "",
+                  "type": "number"
+                },
+                "voltageUnit": {
+                  "description": "Spannungseinheit",
+				  "default": "V",
+				  "type": "string"
+                },
+                "batteryCapacity": {
+				  "description": "",
+				  "default": "",
+                  "type": "number"
+                },
+                "capacityUnit": {
+				  "description": "Kapazitätseinheit",
+				  "default": "Ah",
+                  "type": "string"
+                },
+                "batteryType": {
+                  "description": "Batterietyp",
+				  "default": "",
+                  "type": "string"
+                },
+                "awd": {
+                  "description": "Allrad",
+				  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "capacityUnit": "Ah",
+              "voltageUnit": "V"
+            }
+          },
+          "weights": {
+            "dataSchema": {
+              "properties": {
+                "serviceWeight": {
+				  "description": "Eigengewicht",
+                  "default": 0,
+                  "minimum": 1,
+                  "type": "number"
+                },
+                "serviceWeightUnit": {
+				  "description": "Gewichtseinheit",
+                  "default": "kg",
+				  "minLength": 1,
+                  "type": "string"
+                },
+                "batteryWeight": {
+				  "description": "Batteriegewicht",
+                  "default": "",
+                  "type": "number"
+                },
+                "batteryWeightUnit": {
+				  "description": "Gewichtseinheit",
+                  "default": "kg",
+				  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "batteryWeightUnit": "kg",
+              "serviceWeightUnit": "kg"
+            }
+          },
+          "wheels": {
+            "dataSchema": {
+              "properties": {
+                "tireType": {
+				  "description": "Bereifungstyp",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "markingNonMarking": {
+				  "description": "markierend",
+                  "default": "",
+                  "type": "string"
+                },
+                "wheelNumber": {
+				  "description": "Anzahl Räder",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "wheelNumberDriveSide": {
+				  "description": "Anzahl Räder Antriebseite",
+                  "default": "",
+                  "type": "number"
+                },
+                "wheelNumberLoadSide": {
+				  "description": "Anzahl Räder Ladeseite",
+                  "default": 0,
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          },
+          "equipment": {
+            "dataSchema": {
+              "properties": {
+                "cabin": {
+				  "description": "Fahrerkabine",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "pedal": {
+				  "description": "Einfach-/Doppelpedal",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "equipment1": {
+				  "description": "Sonderausstattung 1",
+                  "default": "",
+                  "type": "string"
+                },
+				"equipment2": {
+				  "description": "Sonderausstattung 2",
+                  "default": "",
+                  "type": "string"
+                },
+				"equipment3": {
+				  "description": "Sonderausstattung 3",
+                  "default": "",
+                  "type": "string"
+                },
+				"equipment4": {
+				  "description": "Sonderausstattung 4",
+                  "default": "",
+                  "type": "string"
+                },
+				"equipment5": {
+				  "description": "Sonderausstattung 5",
+                  "default": "",
+                  "type": "string"
+                },
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
+          }
+        },
+        "type": "metadata"
+      }
+    }
+  }
+}

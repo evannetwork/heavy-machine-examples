@@ -293,7 +293,7 @@
                 "houseNumber": {
                   "description": "Hausnummer",
                   "default": "",
-                  "type": "number"
+                  "type": "string"
                 },
                 "zipCode": {
                   "description": "PLZ",
@@ -806,12 +806,12 @@
                   "default": "mm",
                   "type": "string"
                 },
-                "InitialLift": {
+                "initialLift": {
                   "description": "Initialhub",
                   "default": 0,
                   "type": "number"
                 },
-                "InitialLiftUnit": {
+                "initialLiftUnit": {
                   "description": "Höheneinheit",
                   "default": "mm",
                   "type": "string"

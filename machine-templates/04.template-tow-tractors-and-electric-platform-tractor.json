@@ -10,11 +10,11 @@
       },
       "en": {
         "description": "",
-        "name": "Tow Tractors & Electric-Platform Tractor"
+        "name": "Tow Tractors and Electric-Platform Tractor"
       }
     },
     "name": "tow_tractors_and_electric_platform_tractor",
-    "version": "1.3.6"
+    "version": "1.3.7"
   },
   "plugins": {
     "rentalCalendar": {
@@ -39,7 +39,7 @@
           }
         },
         "name": "Rental calendar",
-        "version": "1.3.6"
+        "version": "1.3.7"
       },
       "template": {
         "properties": {
@@ -170,7 +170,7 @@
           }
         },
         "name": "metadata",
-        "version": "1.3.6"
+        "version": "1.3.7"
       },
       "template": {
         "properties": {

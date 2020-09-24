@@ -795,16 +795,6 @@
                   "default": "",
                   "type": "string"
                 },
-                "loadCentre": {
-                  "description": "Lastschwerpunkt",
-                  "default": 0,
-                  "type": "number"
-                },
-                "loadCentreUnit": {
-                  "description": "Längeneinheit",
-                  "default": "mm",
-                  "type": "string"
-                },
                 "initialLift": {
                   "description": "Initialhub",
                   "default": 0,
@@ -828,7 +818,6 @@
               "heightOfMastLoweredUnit": "mm",
               "freeLiftUnit": "mm",
               "liftUnit": "mm",
-              "loadCentreUnit": "mm",
               "InitialLiftUnit": "mm"
             }
           },

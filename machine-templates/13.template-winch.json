@@ -506,12 +506,12 @@
                   "default": "mm",
                   "type": "string"
                 },
-                "maximum": {
+                "maximumWinchHookPath": {
                   "description": "maximaler Hakenweg",
                   "default": 0,
                   "type": "number"
                 },
-                "lengthUnit": {
+                "winchHookPathUnit": {
                   "description": "Längeneinheit",
                   "default": "m",
                   "type": "string"
@@ -529,7 +529,7 @@
               "overallWidthUnit": "mm",
               "overallLengthUnit": "mm",
               "overallHeightUnit": "mm",
-              "lengthUnit": "m"
+              "winchHookPathUnit": "m"
             }
           },
           "performance": {

@@ -852,7 +852,7 @@
                   "minLength": 1,
                   "type": "string"
                 },
-                "additionalHyraulicsComplete": {
+                "additionalHydraulicsComplete": {
                   "description": "Zusatzhydraulik (Fahrzeug)",
                   "default": "",
                   "type": "string"

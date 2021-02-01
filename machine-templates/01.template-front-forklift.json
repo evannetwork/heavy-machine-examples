@@ -862,12 +862,12 @@
                   "default": "",
                   "type": "string"
                 },
-                "externalAttachtment": {
+                "externalAttachment": {
                   "description": "externes Anbaugerät",
                   "default": "",
                   "type": "string"
                 },
-                "internalDesignationAttachtment1": {
+                "internalDesignationAttachment1": {
                   "description": "interne Bezeichnung",
                   "default": "",
                   "type": "string"

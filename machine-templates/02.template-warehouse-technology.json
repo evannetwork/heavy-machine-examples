@@ -721,8 +721,14 @@
           "wheels": {
             "dataSchema": {
               "properties": {
-                "tireType": {
-                  "description": "Bereifungstyp",
+                "tireDriveSide": {
+                  "description": "Bereifung Antriebsseite",
+                  "default": "",
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "tireLoadSide": {
+                  "description": "Bereifung Ladeseite",
                   "default": "",
                   "minLength": 1,
                   "type": "string"
@@ -749,7 +755,7 @@
                 },
                 "wheelNumberLoadSide": {
                   "description": "Anzahl Räder Ladeseite",
-                  "default": 0,
+                  "default": "",
                   "type": "number"
                 }
               },
@@ -801,9 +807,14 @@
                   "default": "mm",
                   "type": "string"
                 },
-                "forkCarriageType": {
-                  "description": "Gabelträgertyp",
-                  "default": "",
+                 "loadCentre": {
+                  "description": "Lastschwerpunkt",
+                  "default": 0,
+                  "type": "number"
+                },
+                "loadCentreUnit": {
+                  "description": "Längeneinheit",
+                  "default": "mm",
                   "type": "string"
                 },
                 "initialLift": {
@@ -830,6 +841,7 @@
               "freeLiftUnit": "mm",
               "liftUnit": "mm",
               "InitialLiftUnit": "mm"
+              "loadCentreUnit": "mm"
             }
           },
           "equipment": {

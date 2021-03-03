@@ -664,7 +664,7 @@
                   "description": "(IT)Systembezeichnung",
                   "default": "",
                   "type": "string"
-                },
+                }
               },
               "type": "object"
             },
@@ -840,7 +840,7 @@
               "heightOfMastLoweredUnit": "mm",
               "freeLiftUnit": "mm",
               "liftUnit": "mm",
-              "InitialLiftUnit": "mm"
+              "InitialLiftUnit": "mm",
               "loadCentreUnit": "mm"
             }
           },

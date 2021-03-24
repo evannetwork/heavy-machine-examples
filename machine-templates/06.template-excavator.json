@@ -14,7 +14,7 @@
       }
     },
     "name": "excavator",
-    "version": "1.3.8"
+    "version": "1.3.9"
   },
   "plugins": {
     "rentalCalendar": {
@@ -371,9 +371,6 @@
             "permissions": {
               "0": [
                 "set"
-              ],
-              "64": [
-                "set"
               ]
             },
             "type": "entry",
@@ -557,7 +554,7 @@
                   "default": "mm",
 				  "minLength": 1,
                   "type": "string"
-                },  
+                },
 				"maximumGroundLevelReach": {
                   "description": "maximale Reichweite",
                   "default": 0,

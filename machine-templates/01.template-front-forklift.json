@@ -375,9 +375,6 @@
             "permissions": {
               "0": [
                 "set"
-              ],
-              "64": [
-                "set"
               ]
             },
             "type": "entry",

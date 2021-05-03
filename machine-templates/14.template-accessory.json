@@ -192,7 +192,7 @@
                 },
                 "machineClass": {
                   "description": "Geräteklasse",
-				  "default": "",
+                  "default": "",
                   "minLength": 1,
                   "type": "string"
                 },
@@ -468,6 +468,35 @@
                 "files": []
               }
             }
+          },
+          "equipment": {
+            "dataSchema": {
+              "properties": {
+                "accessory1": {
+                  "description": "Zubehör1",
+                  "default": "",
+                  "type": "string"
+                },
+                "internalDesignationAccessory1": {
+                  "description": "interne Bezeichnung 1",
+                  "default": "",
+                  "type": "string"
+                },
+                "descriptionAccessory1": {
+                  "description": "Beschreibung 1",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {}
           }
         },
         "type": "metadata"

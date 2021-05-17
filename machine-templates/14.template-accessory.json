@@ -338,21 +338,6 @@
                     "files"
                   ],
                   "type": "object"
-                },
-                "accessory1": {
-                  "description": "Zubehör1",
-                  "default": "",
-                  "type": "string"
-                },
-                "internalDesignationaccessory1": {
-                  "description": "interne Bezeichnung",
-                  "default": "",
-                  "type": "string"
-                },
-                "description": {
-                  "description": "Beschreibung",
-                  "default": "",
-                  "type": "string"
                 }
               },
               "type": "object"

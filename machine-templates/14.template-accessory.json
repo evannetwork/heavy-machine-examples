@@ -454,6 +454,34 @@
               }
             }
           },
+           "weights": {
+            "dataSchema": {
+              "properties": {
+                "serviceWeight": {
+                  "description": "Eigengewicht",
+                  "default": 0,
+                  "minimum": 1,
+                  "type": "number"
+                },
+                "serviceWeightUnit": {
+                  "description": "Gewichtseinheit",
+                  "default": "kg",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            },
+            "permissions": {
+              "0": [
+                "set"
+              ]
+            },
+            "type": "entry",
+            "value": {
+              "serviceWeightUnit": "kg"
+            }
+          },
           "equipment": {
             "dataSchema": {
               "properties": {

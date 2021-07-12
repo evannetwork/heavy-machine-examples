@@ -807,7 +807,7 @@
                   "minLength": 1,
                   "type": "string"
                 },
-                "additionalHyraulicsComplete": {
+                "additionalHydraulicsComplete": {
                   "description": "Zusatzhydraulik (Fahrzeug)",
                   "default": "",
                   "type": "string"
@@ -817,12 +817,12 @@
                   "default": "",
                   "type": "string"
                 },
-                "externalAttachtment1": {
+                "externalAttachment1": {
                   "description": "externes Anbaugerät",
                   "default": "",
                   "type": "string"
                 },
-                "internalDesignationAttachtment1": {
+                "internalDesignationAttachment1": {
                   "description": "interne Bezeichnung",
                   "default": "",
                   "type": "string"
@@ -832,12 +832,12 @@
                   "default": "",
                   "type": "string"
                 },
-                "externalAttachtment2": {
+                "externalAttachment2": {
                   "description": "externes Anbaugerät",
                   "default": "",
                   "type": "string"
                 },
-                "internalDesignationAttachtment2": {
+                "internalDesignationAttachment2": {
                   "description": "interne Bezeichnung",
                   "default": "",
                   "type": "string"
@@ -847,12 +847,12 @@
                   "default": "",
                   "type": "string"
                 },
-                "externalAttachtment3": {
+                "externalAttachment3": {
                   "description": "externes Anbaugerät",
                   "default": "",
                   "type": "string"
                 },
-                "internalDesignationAttachtment3": {
+                "internalDesignationAttachment3": {
                   "description": "interne Bezeichnung",
                   "default": "",
                   "type": "string"
@@ -862,12 +862,12 @@
                   "default": "",
                   "type": "string"
                 },
-                "externalAttachtment4": {
+                "externalAttachment4": {
                   "description": "externes Anbaugerät",
                   "default": "",
                   "type": "string"
                 },
-                "internalDesignationAttachtment4": {
+                "internalDesignationAttachment4": {
                   "description": "interne Bezeichnung",
                   "default": "",
                   "type": "string"
@@ -877,12 +877,12 @@
                   "default": "",
                   "type": "string"
                 },
-                "externalAttachtment5": {
+                "externalAttachment5": {
                   "description": "externes Anbaugerät",
                   "default": "",
                   "type": "string"
                 },
-                "internalDesignationAttachtment5": {
+                "internalDesignationAttachment5": {
                   "description": "interne Bezeichnung",
                   "default": "",
                   "type": "string"

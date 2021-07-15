@@ -580,7 +580,7 @@
             },
             "type": "entry",
             "value": {
-              "maximumLoadCapacityUnit": "t"
+              "maximumLoadCapacityUnit": "kg"
             }
           },
           "drive": {

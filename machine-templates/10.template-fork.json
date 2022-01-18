@@ -14,7 +14,7 @@
       }
     },
     "name": "fork",
-    "version": "1.3.8"
+    "version": "1.3.11"
   },
   "plugins": {
     "rentalCalendar": {
@@ -39,7 +39,7 @@
           }
         },
         "name": "Rental calendar",
-        "version": "1.3.7"
+        "version": "1.3.11"
       },
       "template": {
         "properties": {
@@ -118,6 +118,36 @@
                         "description": "Stadt",
                         "default": "",
                         "type": "string"
+                      },
+                      "complayName": {
+                        "description": "Firmenname",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "orderingClientName": {
+                        "description": " Auftraggeber Name",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "orderingClientStreet": {
+                        "description": "Auftraggeber Straße",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "orderingClientHousenumber": {
+                        "description": "Auftraggeber Hausnummer",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "orderingClientZipcode": {
+                        "description": " Auftraggeber PLZ",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "orderingClientCity": {
+                        "description": "Auftraggeber Ort",
+                        "default": "",
+                        "type": "string"
                       }
                     },
                     "type": "object"
@@ -131,6 +161,16 @@
                       },
                       "createdby": {
                         "description": "Ersteller",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "modified": {
+                        "description": "Geändert am",
+                        "default": "",
+                        "type": "string"
+                      },
+                      "modifiedby": {
+                        "description": "Geändert durch",
                         "default": "",
                         "type": "string"
                       }

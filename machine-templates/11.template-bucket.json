@@ -119,7 +119,7 @@
                         "default": "",
                         "type": "string"
                       },
-                      "complayName": {
+                      "companyName": {
                         "description": "Firmenname",
                         "default": "",
                         "type": "string"

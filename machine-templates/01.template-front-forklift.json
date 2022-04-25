@@ -531,12 +531,12 @@
             "dataSchema": {
               "$id": "dimensions_schema",
               "properties": {
-                "heightOfOvergheadGuard": {
+                "heightOfOverheadGuard": {
                   "description": "Höhe über Schutzdach (Kabine)",
                   "default": 0,
                   "type": "number"
                 },
-                "heightOfOvergheadGuardUnit": {
+                "heightOfOverheadGuardUnit": {
                   "minLength": 1,
                   "type": "string"
                 },
@@ -623,7 +623,7 @@
               "forkHeightUnit": "mm",
               "forkLengthUnit": "mm",
               "forkWidthUnit": "mm",
-              "heightOfOvergheadGuardUnit": "mm",
+              "heightOfOverheadGuardUnit": "mm",
               "lengthToForkFaceUnit": "mm",
               "overallLengthUnit": "mm",
               "overallWidthUnit": "mm"

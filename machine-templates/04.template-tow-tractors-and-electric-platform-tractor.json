@@ -14,7 +14,7 @@
       }
     },
     "name": "tow_tractors_and_electric_platform_tractor",
-    "version": "1.3.11"
+    "version": "1.3.12"
   },
   "plugins": {
     "rentalCalendar": {
@@ -39,7 +39,7 @@
           }
         },
         "name": "Rental calendar",
-        "version": "1.3.11"
+        "version": "1.3.12"
       },
       "template": {
         "properties": {
@@ -210,7 +210,7 @@
           }
         },
         "name": "metadata",
-        "version": "1.3.9"
+        "version": "1.3.12"
       },
       "template": {
         "properties": {
@@ -273,7 +273,7 @@
             },
             "type": "entry",
             "value": {
-              "machineClass": "Flurförderzeug"
+              "machineClass": "Schlepper & Plattformwagen"
             }
           },
           "owner": {

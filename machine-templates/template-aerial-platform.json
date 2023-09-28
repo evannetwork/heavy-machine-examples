@@ -696,6 +696,12 @@
                 },
                 "soundLevelUnit": {
                   "type": "string"
+                },
+                "onboardUnit": {
+                  "type": "string"
+                },
+                "onboardUnitId": {
+                  "type": "string"
                 }
               },
               "type": "object"
